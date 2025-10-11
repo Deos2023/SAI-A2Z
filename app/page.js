@@ -5,7 +5,7 @@ import StatsSection from "@/components/Stats";
 import SectionTitle from "@/components/SectionTitle";
 import FacilitiesPreview from "@/components/FacilitiesPreview";
 import Testimonials from "@/components/Testimonial";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <>
@@ -52,11 +52,12 @@ export default function Home() {
             </div>
             <div className="relative">
               {/* Replace with your actual image */}
-              <div className="aspect-video rounded-lg shadow-xl overflow-hidden">
-                <img
+              <div className="aspect-video rounded-lg shadow-xl overflow-hidden relative">
+                <Image
                   src="/imagges/wedding.jpg"
                   alt="SAI-A2Z Event Planning - Beautiful event setup"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
 

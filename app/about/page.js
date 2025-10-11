@@ -65,7 +65,7 @@ const AboutPage = () => {
               About <span className="text-burgundy-700">SAI-A2Z</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              With over a decade of excellence in event planning, we've been crafting unforgettable moments 
+              With over a decade of excellence in event planning, we&apos;ve been crafting unforgettable moments 
               and turning visions into reality for clients across Kolkata.
             </p>
           </motion.div>
@@ -90,11 +90,11 @@ const AboutPage = () => {
                   </p>
                   <p>
                     Our team of experienced professionals understands that every event tells a unique story. 
-                    Whether it's an intimate family gathering or a grand corporate function, 
+                    Whether it&apos;s an intimate family gathering or a grand corporate function, 
                     we approach each project with innovative ideas and meticulous attention to detail.
                   </p>
                   <p>
-                    Based in <strong>Dumdum, Kolkata</strong>, we have built strong relationships with the city's best vendors 
+                    Based in <strong>Dumdum, Kolkata</strong>, we have built strong relationships with the city&apos;s best vendors 
                     and premium venues, ensuring we deliver exceptional quality and value for every celebration.
                   </p>
                 </div>
@@ -256,7 +256,7 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-cinzel font-bold text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                To be Kolkata's most trusted and innovative event planning partner, recognized for 
+                To be Kolkata&apos;s most trusted and innovative event planning partner, recognized for 
                 our creativity, reliability, and ability to bring dreams to life. We envision a 
                 future where every celebration we touch becomes an unforgettable masterpiece.
               </p>
@@ -284,7 +284,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto"
           >
-            Let's discuss your event vision and bring it to life with our expertise and passion.
+            Let&apos;s discuss your event vision and bring it to life with our expertise and passion.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
