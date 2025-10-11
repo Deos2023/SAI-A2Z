@@ -1,26 +1,106 @@
+/* app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-poppins: 'Poppins', system-ui, sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+  
+  --color-burgundy-50: #fdf2f8;
+  --color-burgundy-100: #fce7f3;
+  --color-burgundy-200: #fbcfe8;
+  --color-burgundy-300: #f9a8d4;
+  --color-burgundy-400: #f472b6;
+  --color-burgundy-500: #a51f52;
+  --color-burgundy-600: #9d174d;
+  --color-burgundy-700: #831843;
+  --color-burgundy-800: #5a0d31;
+  --color-burgundy-900: #3f0a22;
+  
+  --color-accent-gold: #d4af37;
+  --color-accent-dark: #1a1a1a;
+  
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+  --animate-gold-glow: goldGlow 2s ease-in-out infinite alternate;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #0a0a0a;
+    color: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply bg-burgundy-500 hover:bg-burgundy-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-burgundy-400;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-burgundy-800 font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-burgundy {
+    @apply bg-burgundy-800 hover:bg-burgundy-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gold-text {
+    @apply text-accent-gold;
+  }
+  
+  .burgundy-text {
+    @apply text-burgundy-500;
+  }
+  
+  .dark-bg {
+    @apply bg-accent-dark;
+  }
+  
+  .burgundy-bg {
+    @apply bg-burgundy-800;
+  }
+  
+  .burgundy-gradient {
+    @apply bg-gradient-to-br from-burgundy-800 to-burgundy-900;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goldGlow {
+  from {
+    box-shadow: 0 0 5px #d4af37, 0 0 10px #d4af37;
+  }
+  to {
+    box-shadow: 0 0 20px #d4af37, 0 0 30px #d4af37;
+  }
 }

@@ -1,0 +1,46 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "src": "/imagges/wedding.jpg",
+      "alt": "Wedding Ceremony",
+      "category": "wedding",
+      "title": "Grand Wedding Celebration"
+    },
+    {
+      "id": 2,
+      "src": "/imagges/corporate.jpg",
+      "alt": "Corporate Event",
+      "category": "corporate",
+      "title": "Corporate Conference"
+    },
+    {
+      "id": 3,
+      "src": "/imagges/birthday.jpg",
+      "alt": "Birthday Party",
+      "category": "birthday",
+      "title": "Kids Birthday Party"
+    },
+    {
+      "id": 4,
+      "src": "/imagges/catering.jpg",
+      "alt": "Event Decoration",
+      "category": "decoration",
+      "title": "Floral Stage Decoration"
+    },
+    {
+      "id": 5,
+      "src": "/imagges/wedding-2.jpg",
+      "alt": "Wedding Reception",
+      "category": "wedding",
+      "title": "Luxury Wedding Reception"
+    },
+    {
+      "id": 6,
+      "src": "/imagges/sports.jpg",
+      "alt": "Sports Event",
+      "category": "sports",
+      "title": "Sports Event"
+    }
+  ]
+}

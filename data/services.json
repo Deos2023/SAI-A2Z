@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Wedding Ceremony",
+      "description": "Complete wedding planning services from venue selection to ceremony coordination. We make your special day truly memorable and magical.",
+      "icon": "💍",
+      "features": ["Venue Selection", "Bridal Makeup", "Photography", "Entertainment", "Catering"]
+    },
+    {
+      "id": 2,
+      "title": "Birthday Party",
+      "description": "Creative and fun birthday party planning for all ages, from kids to adults with amazing themes and decorations.",
+      "icon": "🎂",
+      "features": ["Theme Parties", "Entertainment", "Cake Design", "Decorations", "Games"]
+    },
+    {
+      "id": 3,
+      "title": "Decoration",
+      "description": "Stunning decoration setups for all types of events with premium materials and creative designs.",
+      "icon": "🎨",
+      "features": ["Floral Arrangements", "Theme Decor", "Lighting", "Stage Setup", "Backdrops"]
+    },
+    {
+      "id": 4,
+      "title": "Catering",
+      "description": "Delicious and hygienic catering with diverse menu options for all occasions and tastes.",
+      "icon": "🍽️",
+      "features": ["Multi-cuisine", "Hygienic Kitchen", "Custom Menu", "Staff Service", "Live Counters"]
+    },
+    {
+      "id": 5,
+      "title": "Sport Event",
+      "description": "Professional management for sports events, tournaments, and athletic competitions.",
+      "icon": "⚽",
+      "features": ["Tournament Setup", "Equipment", "Trophy", "Refreshments", "Coordination"]
+    },
+    {
+      "id": 6,
+      "title": "Corporate Event",
+      "description": "Professional event management for corporate gatherings, conferences, and team building activities.",
+      "icon": "🏢",
+      "features": ["Conference Planning", "Team Building", "Product Launch", "Annual Meetings", "Seminars"]
+    }
+  ]
+}
