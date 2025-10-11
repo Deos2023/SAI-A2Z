@@ -168,6 +168,48 @@ export default function Home() {
           <Testimonials />
         </div>
       </section>
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fade-in">
+        <div className="p-4 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white">
+          <h3 className="text-lg font-cinzel font-semibold text-center">
+            Visit Our Office
+          </h3>
+        </div>
+        <div className="p-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.241212167909!2d88.4224324759964!3d22.646146979438395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89e1d81b15f0f%3A0x7e4b4b4b4b4b4b4b!2sSAI-A2Z%20Event%20Planner!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="SAI-A2Z Event Planner Office Location"
+            className="rounded-lg"
+          />
+        </div>
+        <div className="p-4 bg-gray-50 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-sm text-gray-700">
+              <p className="font-semibold text-burgundy-800">
+                SAI-A2Z Event Planner
+              </p>
+              <p className="text-gray-600">Dumdum, Kolkata, West Bengal</p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/3AnuUUa7JeSZNw2R7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white text-burgundy-700 rounded-lg font-semibold hover:bg-burgundy-50 transition-colors duration-300 border border-burgundy-200 text-sm"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z" />
+              </svg>
+              Open in Maps
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Process Overview */}
       <section className="section-padding bg-white">
@@ -259,8 +301,54 @@ export default function Home() {
             </p>
           </div>
         </div>
+        {/* <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fade-in">
+          <div className="p-4 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white">
+            <h3 className="text-lg font-cinzel font-semibold text-center">
+              Visit Our Office
+            </h3>
+          </div>
+          <div className="p-1">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.241212167909!2d88.4224324759964!3d22.646146979438395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89e1d81b15f0f%3A0x7e4b4b4b4b4b4b4b!2sSAI-A2Z%20Event%20Planner!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SAI-A2Z Event Planner Office Location"
+              className="rounded-lg"
+            />
+          </div>
+          <div className="p-4 bg-gray-50 border-t border-gray-200">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-sm text-gray-700">
+                <p className="font-semibold text-burgundy-800">
+                  SAI-A2Z Event Planner
+                </p>
+                <p className="text-gray-600">Dumdum, Kolkata, West Bengal</p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/3AnuUUa7JeSZNw2R7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-burgundy-700 rounded-lg font-semibold hover:bg-burgundy-50 transition-colors duration-300 border border-burgundy-200 text-sm"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z" />
+                </svg>
+                Open in Maps
+              </a>
+            </div>
+          </div>
+        </div> */}
       </section>
-      
+
       {/* <FloatingButtons/> */}
     </>
   );
