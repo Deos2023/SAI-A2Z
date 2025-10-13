@@ -2,6 +2,7 @@
 "use client"
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
@@ -59,17 +60,27 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col">
-            <span className={`text-2xl md:text-3xl font-cinzel font-bold transition-colors duration-300 ${
-              isHomePage && !isScrolled ? 'text-white' : 'text-accent-gold'
-            }`}>
-              SAI A2Z
-            </span>
-            <span className={`text-xs md:text-sm font-sans tracking-widest transition-colors duration-300 ${
-              isHomePage && !isScrolled ? 'text-accent-gold' : 'text-gray-300'
-            }`}>
-              EVENT PLANNER
-            </span>
+          <Link href="/" className="flex items-center gap-3 group" aria-label="SAI A2Z Home">
+            <Image
+              src="/imagges/a%20to%20z%20logo.png"
+              alt="SAI A2Z logo"
+              width={48}
+              height={48}
+              priority
+              className={`rounded-md shadow-md transition-transform duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}
+            />
+            <div className="flex flex-col leading-none">
+              <span className={`text-2xl md:text-3xl font-cinzel font-bold transition-colors duration-300 ${
+                isHomePage && !isScrolled ? 'text-white' : 'text-accent-gold'
+              }`}>
+                SAI A2Z
+              </span>
+              <span className={`text-[10px] md:text-xs font-sans tracking-[0.25em] transition-colors duration-300 ${
+                isHomePage && !isScrolled ? 'text-accent-gold' : 'text-gray-300'
+              }`}>
+                EVENT PLANNER
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

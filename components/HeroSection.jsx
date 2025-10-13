@@ -21,6 +21,26 @@ const HeroSection = () => {
     return () => clearInterval(interval)
   }, [])
 
+  // Preload gallery images to eliminate flicker and ensure seamless transitions
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    galleryData.images.forEach((img) => {
+      const image = new window.Image()
+      image.src = img.src
+      if (image.complete) {
+        setLoadedImages(prev => ({ ...prev, [img.id]: true }))
+      } else {
+        image.onload = () => {
+          setLoadedImages(prev => ({ ...prev, [img.id]: true }))
+        }
+        image.onerror = () => {
+          // Avoid indefinite skeleton if image fails
+          setLoadedImages(prev => ({ ...prev, [img.id]: true }))
+        }
+      }
+    })
+  }, [])
+
   const handleImageLoad = (imageId) => {
     setLoadedImages(prev => ({ ...prev, [imageId]: true }))
   }
@@ -45,7 +65,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image Slideshow */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync">
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
@@ -63,6 +83,9 @@ const HeroSection = () => {
             <img
               src={galleryData.images[currentImageIndex]?.src}
               alt={galleryData.images[currentImageIndex]?.alt}
+              loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
+              fetchpriority={currentImageIndex === 0 ? 'high' : 'low'}
+              decoding="async"
               className={`w-full h-full object-cover transition-opacity duration-1000 ${
                 loadedImages[galleryData.images[currentImageIndex]?.id] ? 'opacity-100' : 'opacity-0'
               }`}
