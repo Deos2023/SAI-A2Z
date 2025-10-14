@@ -16,7 +16,7 @@ const HeroSection = () => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === galleryData.images.length - 1 ? 0 : prevIndex + 1
       )
-    }, 5000) // Change image every 5 seconds
+    }, 4000) // Change image every 4 seconds
 
     return () => clearInterval(interval)
   }, [])
