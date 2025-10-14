@@ -51,11 +51,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-burgundy-800/95 backdrop-blur-md shadow-lg border-b border-accent-gold/20'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
@@ -69,15 +68,14 @@ const Navbar = () => {
               priority
               className={`rounded-md shadow-md transition-transform duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}
             />
-            <div className="flex flex-col leading-none">
-              <span className={`text-2xl md:text-3xl font-cinzel font-bold transition-colors duration-300 ${
-                isHomePage && !isScrolled ? 'text-white' : 'text-accent-gold'
-              }`}>
+            <div className="flex items-baseline leading-none space-x-3">
+              <span className={`text-xl md:text-3xl font-cinzel font-bold transition-colors duration-300 ${isHomePage && !isScrolled ? 'text-white' : 'text-accent-gold'
+                }`}>
                 SAI A2Z
               </span>
-              <span className={`text-[10px] md:text-xs font-sans tracking-[0.25em] transition-colors duration-300 ${
-                isHomePage && !isScrolled ? 'text-accent-gold' : 'text-gray-300'
-              }`}>
+              <span className="text-gray-400">|</span>
+              <span className={`text-3xl md:text-xl font-sans tracking-[0.25em] transition-colors duration-300 ${isHomePage && !isScrolled ? 'text-accent-gold' : 'text-gray-300'
+                }`}>
                 EVENT PLANNER
               </span>
             </div>
@@ -89,17 +87,15 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`font-sans font-medium transition-colors relative group ${
-                  isActive(link.path)
+                className={`font-sans font-medium transition-colors relative group ${isActive(link.path)
                     ? getActiveColor()
                     : `${getTextColor()} ${getHoverColor()}`
-                }`}
+                  }`}
               >
                 {link.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-accent-gold transition-all duration-300 ${
-                    isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-accent-gold transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
                 />
               </Link>
             ))}
@@ -114,9 +110,8 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden transition-colors duration-300 ${
-              isHomePage && !isScrolled ? 'text-white' : 'text-accent-gold'
-            }`}
+            className={`lg:hidden transition-colors duration-300 ${isHomePage && !isScrolled ? 'text-white' : 'text-accent-gold'
+              }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -139,11 +134,10 @@ const Navbar = () => {
                     key={link.path}
                     href={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`font-sans font-medium px-4 py-2 transition-colors ${
-                      isActive(link.path)
+                    className={`font-sans font-medium px-4 py-2 transition-colors ${isActive(link.path)
                         ? 'text-accent-gold bg-burgundy-700'
                         : 'text-gray-300 hover:text-accent-gold hover:bg-burgundy-700'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>

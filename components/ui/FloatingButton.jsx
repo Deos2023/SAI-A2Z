@@ -1,5 +1,5 @@
 "use client"
-import { Phone, MessageCircle, ChevronUp } from "lucide-react";
+import { Phone, MessageSquare , ChevronUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const FloatingButtons = () => {
@@ -28,7 +28,7 @@ const FloatingButtons = () => {
         aria-label="WhatsApp"
         className="inline-flex items-center justify-center rounded-full h-14 w-14 shadow-lg bg-[#25D366] hover:bg-[#20ba5a] text-white transition-all duration-300 hover:scale-110 hover:shadow-xl animate-float"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageSquare  className="h-6 w-6" />
       </a>
 
       {/* Call Button */}
