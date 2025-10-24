@@ -13,7 +13,7 @@ const HeroSection = () => {
   // Auto-advance slideshow
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === galleryData.images.length - 1 ? 0 : prevIndex + 1
       )
     }, 4000) // Change image every 4 seconds
@@ -46,13 +46,13 @@ const HeroSection = () => {
   }
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === galleryData.images.length - 1 ? 0 : prevIndex + 1
     )
   }
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? galleryData.images.length - 1 : prevIndex - 1
     )
   }
@@ -78,7 +78,7 @@ const HeroSection = () => {
             {!loadedImages[galleryData.images[currentImageIndex]?.id] && (
               <div className="absolute inset-0 bg-gradient-to-br from-burgundy-800 to-burgundy-900 animate-pulse"></div>
             )}
-            
+
             {/* Background Image */}
             <img
               src={galleryData.images[currentImageIndex]?.src}
@@ -86,15 +86,14 @@ const HeroSection = () => {
               loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
               fetchpriority={currentImageIndex === 0 ? 'high' : 'low'}
               decoding="async"
-              className={`w-full h-full object-cover transition-opacity duration-1000 ${
-                loadedImages[galleryData.images[currentImageIndex]?.id] ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`w-full h-full object-cover transition-opacity duration-1000 ${loadedImages[galleryData.images[currentImageIndex]?.id] ? 'opacity-100' : 'opacity-0'
+                }`}
               onLoad={() => handleImageLoad(galleryData.images[currentImageIndex]?.id)}
             />
-            
+
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-burgundy-900/80 via-burgundy-800/60 to-burgundy-900/80"></div>
-            
+
             {/* Additional Pattern Overlay */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-20 left-10 w-72 h-72 bg-accent-gold rounded-full mix-blend-soft-light filter blur-xl opacity-30 animate-pulse"></div>
@@ -128,11 +127,10 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => goToImage(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentImageIndex
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentImageIndex
                 ? 'bg-accent-gold scale-125'
                 : 'bg-white/50 hover:bg-white/80'
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
@@ -153,12 +151,14 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-8"
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinzel font-bold gold-text mb-4 leading-tight drop-shadow-2xl">
-                SAI A2Z
-              </h1>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-cinzel font-semibold gold-text mb-8 drop-shadow-2xl">
-                EVENT PLANNER
-              </h2>
+              <div className="flex items-baseline space-x-4 md:space-x-6 whitespace-nowrap ml-10">
+                <h1 className="text-3xl md:text-4xl lg:text-6xl font-cinzel font-bold gold-text leading-tight drop-shadow-2xl">
+                  SAI A2Z
+                </h1>
+                <h2 className="text-lg md:text-3xl lg:text-4xl font-cinzel font-semibold gold-text drop-shadow-2xl">
+                  EVENT PLANNER
+                </h2>
+              </div>
             </motion.div>
 
             {/* Current Event Type Badge */}
@@ -195,7 +195,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-2xl"
             >
-              Complete event planning solutions in Kolkata. From intimate gatherings to grand celebrations, 
+              Complete event planning solutions in Kolkata. From intimate gatherings to grand celebrations,
               we bring your vision to life with perfection and elegance.
             </motion.p>
 
@@ -203,8 +203,8 @@ const HeroSection = () => {
               <Link href="/get-quote" className="btn-primary transform hover:scale-105 transition-transform duration-300">
                 Get Free Quote
               </Link>
-              <a 
-                href="tel:9770966605" 
+              <a
+                href="tel:9770966605"
                 className="btn-secondary flex items-center space-x-2 transform hover:scale-105 transition-transform duration-300"
               >
                 <Phone size={20} />
