@@ -4,7 +4,7 @@ export default function Testimonials() {
     {
       name: "Priya Sharma",
       event: "Wedding Reception",
-      text: "Maharaja Banquets made our wedding day absolutely magical! The staff was incredibly professional and the venue was stunning.",
+      text: "SAI A2Z made our wedding day absolutely magical! The staff was incredibly professional and the venue was stunning.",
       rating: 5
     },
     {
