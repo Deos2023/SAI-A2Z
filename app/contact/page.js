@@ -20,7 +20,7 @@ const ContactPage = () => {
     {
       icon: <Phone className="w-6 h-6 text-primary-600" />,
       title: "Call Us",
-      details: ["9770966605", "9830204459"],
+      details: ["9830204459", "9770966605"],
     },
     {
       icon: <Mail className="w-6 h-6 text-primary-600" />,

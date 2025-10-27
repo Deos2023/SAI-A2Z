@@ -80,7 +80,7 @@ const StatsSection = () => {
         </div>
         
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          <StatItem end={10} label="Years of Service" suffix="+" />
+          <StatItem end={5} label="Years of Service" suffix="+" />
           <StatItem end={500} label="Events Hosted" suffix="+" />
           <StatItem end={1000} label="Happy Clients" suffix="+" />
           <StatItem end={98} label="Success Rate" suffix="%" />
