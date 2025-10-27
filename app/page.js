@@ -276,10 +276,10 @@ export default function Home() {
             all the details while you enjoy the journey to your special day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:9770966605" className="btn-primary-lg group">
+            <a href="tel:9830204459" className="btn-primary-lg group">
               <span className="flex items-center gap-2">
                 <PhoneIcon className="w-5 h-5" />
-                Call Now: 9770966605
+                Call Now: 9830204459
               </span>
             </a>
             <a
