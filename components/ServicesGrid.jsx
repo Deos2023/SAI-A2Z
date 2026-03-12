@@ -83,7 +83,7 @@ const ServicesGrid = ({ limit, showViewAll = false }) => {
                   </div>
                 )}
                 <Link 
-                  href={`/services`}
+                  href={`/services/catering-services`}
                   className="px-6 py-2 bg-burgundy-600 text-white rounded-lg font-semibold hover:bg-burgundy-700 transition-colors duration-300 transform group-hover:scale-105"
                 >
                   View Details
